@@ -81,7 +81,15 @@ function App() {
         />
         <Route
           path="/chat"
-          element={<Chat socket={socket} name={name} room={room} />}
+          element={
+            <Chat
+              socket={socket}
+              name={name}
+              setName={setName}
+              setRoom={setRoom}
+              room={room}
+            />
+          }
         />
       </Routes>
     </>
