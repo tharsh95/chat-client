@@ -6,8 +6,8 @@ const Room = ({ socket, name, room, setName, setRoom }) => {
 
   const joinRoom = () => {
     if (name && room) {
-        localStorage.setItem("room",room)
-        localStorage.setItem("name",name)
+        sessionStorage.setItem("room",room)
+        sessionStorage.setItem("name",name)
       socket.emit("join", { name, room });
       navigate("/chat");
     }
