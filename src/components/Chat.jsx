@@ -68,7 +68,7 @@ const YourChatComponent = ({ setRoom, setName, socket, room, name }) => {
         <div className="overflow-scroll">
           {JSON.parse(sessionStorage.getItem("chats"))?.map((el) => (
             <div
-              className={`m-2 p-4 rounded-lg  ${
+              className={`m-2 p-2 rounded-lg flex justify-between items-center ${
                 el.name === name ? "bg-white " : "bg-green-200"
               }`}
             >
@@ -80,7 +80,7 @@ const YourChatComponent = ({ setRoom, setName, socket, room, name }) => {
                   {name === el.name ? "You" : el.name}
                 </p>
               </div>
-              <div>
+              <div className="">
                 <p className="text-xs">{el.time}</p>
               </div>
             </div>
